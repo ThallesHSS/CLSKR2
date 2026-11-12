@@ -1,0 +1,64 @@
+CLICK SEEKER — ATUALIZAÇÃO DE HERÓIS E PASSIVAS
+
+O QUE FOI ADICIONADO
+
+1. Novo herói: pedrinhoo07140
+- Foi posicionado logo depois do Padre Thalles na lista de heróis.
+- Usa o sprite Piskel enviado, convertido para a paleta interna de sprites do jogo.
+- Tem exatamente o mesmo custo-base (11.000.000) e dano-base por nível (170.000) do Padre Thalles.
+
+2. Passiva do Padre Thalles — Purification Flames
+3. Passiva de pedrinhoo07140 — Abyss Flame
+- Cada passiva precisa ser desbloqueada separadamente na árvore de talentos.
+- O herói correspondente precisa estar contratado antes de comprar o desbloqueio.
+- Os dois começam com 8% de chance de ativação, 18 segundos de recarga e 3 segundos de duração.
+- As chamas causam dano em pulsos a cada 0,5 segundo. Cada pulso começa causando 16% do dano de um ataque do herói que aplicou o efeito.
+- As duas chamas causam 35% de dano adicional contra mortos-vivos e criaturas de fogo/lava.
+
+4. Ramos exclusivos na árvore de talentos
+Cada herói ganhou seu próprio ramo com três melhorias:
+- Dano: +20% por nível, até 5 níveis.
+- Recarga: -10% por nível, até 5 níveis.
+- Duração: +0,5 segundo por nível, até 5 níveis.
+- O nó inicial custa 2 pontos de talento; cada melhoria custa 1 ponto.
+- Redefinir a árvore devolve todos os pontos, como já acontecia com os outros talentos.
+
+5. Efeitos visuais
+- Purification Flames: brilho dourado/alaranjado e pequenas partículas quentes.
+- Abyss Flame: brilho roxo e partículas lilases.
+- Os números dos pulsos também usam as cores de cada passiva.
+- O sprite dos heróis recebe um brilho discreto para diferenciá-los no grupo.
+
+SALVAMENTO E NUVEM
+- O formato do save foi atualizado para a versão 4.
+- Saves anteriores são normalizados automaticamente; o progresso existente não precisa ser apagado.
+- As recargas das passivas são convertidas para tempo restante na sincronização em nuvem, assim como as habilidades existentes.
+
+ARQUIVOS ALTERADOS
+- script.js: herói, passivas, talentos, dano periódico, afinidades e save.
+- sprites.js: sprite do Pedro e dois ícones novos para a árvore.
+- style.css: ramos adicionais, brilho e partículas.
+- meta.js: tutorial, comando dev de zerar recargas e sincronização em nuvem.
+
+COMO USAR
+1. Faça uma cópia de segurança da pasta atual do jogo.
+2. Extraia esta pasta e substitua os arquivos do projeto pelos arquivos desta versão.
+3. Mantenha sua configuração Firebase atual caso ela tenha sido personalizada fora dos arquivos enviados.
+4. Abra o index.html ou publique a pasta normalmente no mesmo serviço de hospedagem do projeto.
+
+OBSERVAÇÃO DE TESTES
+Os arquivos JavaScript passaram pela verificação de sintaxe; o sprite, os ícones, os pré-requisitos da árvore, o equilíbrio dos atributos dos dois heróis, o CSS e o HTML também passaram por verificações estáticas. Não foi possível concluir uma partida de teste automatizada em navegador neste ambiente.
+
+6. Redesign da árvore de talentos
+- A árvore agora abre em uma tela dedicada, ocupando a janela inteira, com fundo cinza-carvão quase preto.
+- Os ramos ficam separados em um tabuleiro amplo, preparado para receber novas categorias de habilidades.
+- A área central pode ser arrastada com o mouse ou com toque; o botão "Centralizar" reposiciona o tabuleiro.
+- Talentos comprados exibem uma aura pulsante discreta na cor do próprio ramo.
+- As conexões começam apagadas e acendem com brilho na cor do ramo quando o talento anterior é comprado.
+- Comprar um talento dispara uma animação curta de salto, aumento, brilho e retorno ao tamanho normal, inspirada na sensação visual de Forager.
+- A interface respeita a preferência do sistema por movimento reduzido.
+
+ARQUIVOS ATUALIZADOS NESTA ETAPA
+- index.html: estrutura da tela dedicada, controles e área arrastável.
+- script.js: posicionamento/arraste do tabuleiro, centralização, estado visual de compras e animação.
+- style.css: novo visual escuro, espaçamento dos ramos, brilhos, conexões e responsividade.
